@@ -1,5 +1,6 @@
 import React from "react";
 import GamepadIcon from "@mui/icons-material/Gamepad";
+import Link from "next/link";
 
 function SignInForm() {
   return (
@@ -58,12 +59,12 @@ function SignInForm() {
               </button>
               <p className="text-sm font-light text-green-500 dark:text-green-500">
                 Don’t have an account yet?{" "}
-                <a
+                <Link
                   href="/auth/register"
                   className="font-medium text-primary-600 hover:underline dark:text-primary-500"
                 >
                   Sign up
-                </a>
+                </Link>
               </p>
             </form>
           </div>

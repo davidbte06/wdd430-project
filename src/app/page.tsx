@@ -1,8 +1,10 @@
-import React from "react";
-import HomeComponent from "@/components/ui/home";
+import Hero from '@/components/ui/HeroPage'
+import React from 'react'
 
-const Home = () => {
-  return  <HomeComponent />
-};
+const HeroPage = () => {
+  return (
+    <Hero/>
+  )
+}
 
-export default Home;
+export default HeroPage
