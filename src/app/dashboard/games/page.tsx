@@ -8,7 +8,7 @@ interface VideoGame {
   title: string;
   description: string;
   image: string | null;
-  platforms: string[]; // Changed to lowercase "platforms"
+  Platforms: string[]; // Use uppercase "Platforms"
 }
 
 export default function VideoGamesPage() {
