@@ -10,12 +10,23 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model User {
+model UserGame {
   id         String   @id @default(auto()) @map("_id") @db.ObjectId
   email      String   @unique
   firstName  String
+  middleName String?
   lastName   String
   password   String
   createdAt  DateTime @default(now())
   updatedAt  DateTime @updatedAt
+}
+model VideoGame {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  title       String
+  image       String?
+  description String
+  Platforms  String[]
+  releaseDate DateTime
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
 }

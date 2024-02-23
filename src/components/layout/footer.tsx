@@ -3,7 +3,7 @@ import GamepadIcon from "@mui/icons-material/Gamepad";
 
 const footer = () => {
   return (
-    <footer className="w-full bottom-0 bg-gray-900">
+    <footer className="w-full bg-gray-900">
       <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
         <div className="sm:flex sm:items-center sm:justify-between">
           <a
@@ -38,7 +38,7 @@ const footer = () => {
             </li>
           </ul>
         </div>
-        <hr className="my-6 border-white sm:mx-auto  lg:my-8" />
+        <hr className="my-6 border-white sm:mx-auto lg:my-8" />
         <span className="block text-sm text-white sm:text-center">
           © 2024{" "}
           <a href="/" className="hover:underline">

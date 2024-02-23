@@ -1,9 +1,10 @@
-import React from 'react'
+import React from 'react';
+import DashComponent from '@/components/ui/DashComponent';
 
 const HomePage = () => {
   return (
-    <h1>HomePage</h1>
-  )
-}
+    <DashComponent />
+  );
+};
 
-export default HomePage
+export default HomePage;

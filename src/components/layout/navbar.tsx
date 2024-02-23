@@ -3,6 +3,7 @@ import Link from "next/link";
 import GamepadIcon from "@mui/icons-material/Gamepad";
 import PersonIcon from "@mui/icons-material/Person";
 import LogoutIcon from "@mui/icons-material/Logout";
+import { signOut } from "../../../auth";
 
 const Navbar = () => {
   return (
@@ -19,21 +20,21 @@ const Navbar = () => {
         </a>
         <div className="flex items-center space-x-6">
           <Link
-            href="#"
+            href="/dashboard"
             className="text-gray-800 dark:text-gray-200 border-b-2 border-blue-500"
           >
             Home
           </Link>
 
           <Link
-            href="#"
+            href="/dashboard/games"
             className="border-b-2 border-transparent hover:text-gray-800 dark:hover:text-gray-200 hover:border-blue-500"
           >
             Games
           </Link>
 
           <Link
-            href="#"
+            href="/dashboard/about"
             className="border-b-2 border-transparent hover:text-gray-800 dark:hover:text-gray-200 hover:border-blue-500"
           >
             About Us
@@ -46,12 +47,17 @@ const Navbar = () => {
           >
             <PersonIcon />
           </Link>
-          <Link
-            href="#"
-            className="border-b-2 border-transparent hover:text-gray-800 dark:hover:text-gray-200 hover:border-blue-500"
-          >
-            <LogoutIcon />
-          </Link>
+          <form action={async () => {
+            'use server';
+            await signOut();
+          }}>
+            <button
+              type="submit"
+              className="border-b-2 border-transparent hover:text-gray-800 dark:hover:text-gray-200 hover:border-blue-500"
+            >
+              <LogoutIcon className="w-6" />
+            </button>
+          </form>
         </div>
       </div>
     </nav>
