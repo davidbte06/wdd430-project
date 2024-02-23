@@ -12,8 +12,8 @@ import { useFormState, useFormStatus } from 'react-dom';
 import { registerUser } from '@/lib/actions';
 
 export default function SingupForm() {
-  const initialState = { message: null, errors: {} };
-  const [errorMessage, dispatch] = useFormState(registerUser, initialState);
+  const initialState = {}; // Declare the initialState variable
+  const [errorMessage, dispatch] = useFormState((prevState: any, formData: any) => registerUser(prevState, formData), initialState);
 
   return (
     <form action={dispatch} className="space-y-3">
